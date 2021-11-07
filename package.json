@@ -1,5 +1,5 @@
 {
-  "homepage": "http://devkeystuff.github.io/hexagon-terrain",
+  "homepage": "http://devkeystuff.github.io/react-hexagon-terrain",
   "name": "hexagon-terrain",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,8 @@
     "styled-components": "^5.3.3",
     "three": "^0.134.0",
     "typescript": "^4.1.9",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "immer": "^9.0.6"
   },
   "scripts": {
     "predeploy": "yarn run build",

@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/hexagon-terrain/static/css/main.44ab006f.chunk.css",
-    "main.js": "/hexagon-terrain/static/js/main.fa00856a.chunk.js",
-    "main.js.map": "/hexagon-terrain/static/js/main.fa00856a.chunk.js.map",
-    "runtime-main.js": "/hexagon-terrain/static/js/runtime-main.b1a73a01.js",
-    "runtime-main.js.map": "/hexagon-terrain/static/js/runtime-main.b1a73a01.js.map",
-    "static/js/2.9158f532.chunk.js": "/hexagon-terrain/static/js/2.9158f532.chunk.js",
-    "static/js/2.9158f532.chunk.js.map": "/hexagon-terrain/static/js/2.9158f532.chunk.js.map",
-    "index.html": "/hexagon-terrain/index.html",
-    "static/css/main.44ab006f.chunk.css.map": "/hexagon-terrain/static/css/main.44ab006f.chunk.css.map",
-    "static/js/2.9158f532.chunk.js.LICENSE.txt": "/hexagon-terrain/static/js/2.9158f532.chunk.js.LICENSE.txt"
+    "main.css": "/react-hexagon-terrain/static/css/main.44ab006f.chunk.css",
+    "main.js": "/react-hexagon-terrain/static/js/main.fa00856a.chunk.js",
+    "main.js.map": "/react-hexagon-terrain/static/js/main.fa00856a.chunk.js.map",
+    "runtime-main.js": "/react-hexagon-terrain/static/js/runtime-main.63a03810.js",
+    "runtime-main.js.map": "/react-hexagon-terrain/static/js/runtime-main.63a03810.js.map",
+    "static/js/2.9158f532.chunk.js": "/react-hexagon-terrain/static/js/2.9158f532.chunk.js",
+    "static/js/2.9158f532.chunk.js.map": "/react-hexagon-terrain/static/js/2.9158f532.chunk.js.map",
+    "index.html": "/react-hexagon-terrain/index.html",
+    "static/css/main.44ab006f.chunk.css.map": "/react-hexagon-terrain/static/css/main.44ab006f.chunk.css.map",
+    "static/js/2.9158f532.chunk.js.LICENSE.txt": "/react-hexagon-terrain/static/js/2.9158f532.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b1a73a01.js",
+    "static/js/runtime-main.63a03810.js",
     "static/js/2.9158f532.chunk.js",
     "static/css/main.44ab006f.chunk.css",
     "static/js/main.fa00856a.chunk.js"

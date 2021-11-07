@@ -10,7 +10,7 @@ interface IGenerateHexagonGridParams {
   gridRadius: number;
   tileSpacing: number;
   tileWidth: number;
-  y: number;
+  position: [number, number, number];
 }
 
 const HexagonGrid: React.FC = (props) => {
@@ -18,13 +18,13 @@ const HexagonGrid: React.FC = (props) => {
     gridRadius,
     tileSpacing,
     tileWidth,
-    y,
+    position,
   }: IGenerateHexagonGridParams) => {
     let result: ReactNode[] = [];
     const tileSize = tileWidth * Math.sqrt(3);
     const startingTilePos: { x: number; z: number } = {
-      x: (-gridRadius * (tileSize + tileSpacing)) / Math.sqrt(3),
-      z: ((-gridRadius * (tileSize + tileSpacing)) / Math.sqrt(3)) * 1.2,
+      x: -gridRadius * ((tileSize / Math.sqrt(3)) * 1.5 + tileSpacing),
+      z: -gridRadius * (tileWidth + tileSpacing) + Math.sqrt(3) / 2,
     };
     let currentRowTileCount = gridRadius - 1;
     for (let i = 0; i < gridRadius * 2 - 1; i++) {
@@ -39,10 +39,14 @@ const HexagonGrid: React.FC = (props) => {
         result.push(
           <mesh
             position={[
-              startingTilePos.x + (tileSize + tileSpacing) * j - offset,
-              y,
+              startingTilePos.x +
+                (tileSize + tileSpacing) * j -
+                offset +
+                position[0],
+              position[1],
               startingTilePos.z +
-                ((tileSize + tileSpacing) / Math.sqrt(3)) * 1.5 * i,
+                ((tileSize + tileSpacing) / Math.sqrt(3)) * 1.5 * i +
+                position[2],
             ]}
             receiveShadow
           >
@@ -57,10 +61,10 @@ const HexagonGrid: React.FC = (props) => {
   return (
     <>
       {generateHexagonGrid({
-        gridRadius: 5,
-        tileSpacing: 0,
-        tileWidth: 6,
-        y: 0,
+        gridRadius: 4,
+        tileSpacing: 2,
+        tileWidth: 4,
+        position: [0, 0, 0],
       })}
     </>
   );

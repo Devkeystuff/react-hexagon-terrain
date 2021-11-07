@@ -11,7 +11,7 @@ const HexagonGridEnv: React.FC = () => {
     >
       <Suspense fallback={null}>
         <HexagonGrid />
-        <Environment preset={"sunset"} />
+        <Environment preset={"forest"} />
       </Suspense>
       <OrbitControls />
     </Canvas>

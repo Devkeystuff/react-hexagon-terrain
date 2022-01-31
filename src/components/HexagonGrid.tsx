@@ -2,8 +2,11 @@ import React, { ReactNode } from "react";
 import {} from "@react-three/drei";
 import "@react-three/fiber";
 
-interface IHexagonGridProps {
-  maxHeight: number;
+export interface HexgagonGridProps {
+  position: [number, number, number];
+  gridRadius: number;
+  tileSpacing: number;
+  tileWidth: number;
 }
 
 interface IGenerateHexagonGridParams {
@@ -13,7 +16,7 @@ interface IGenerateHexagonGridParams {
   position: [number, number, number];
 }
 
-const HexagonGrid: React.FC = (props) => {
+const HexagonGrid: React.FC<HexgagonGridProps> = (props) => {
   const generateHexagonGrid = ({
     gridRadius,
     tileSpacing,
@@ -65,10 +68,10 @@ const HexagonGrid: React.FC = (props) => {
   return (
     <>
       {generateHexagonGrid({
-        gridRadius: 4,
-        tileSpacing: 4,
-        tileWidth: 4,
-        position: [0, 0, 0],
+        gridRadius: props.gridRadius,
+        tileSpacing: props.tileSpacing,
+        tileWidth: props.tileWidth,
+        position: props.position,
       })}
     </>
   );

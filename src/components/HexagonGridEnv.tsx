@@ -6,13 +6,15 @@ import { StyledInput } from "../styles/Input.styled";
 import styled from "styled-components";
 
 const StyledInputContainer = styled.div`
-  position: "absolute";
+  position: absolute;
   padding: 50px;
   width: 400px;
   margin: 10px;
-  background-color: rgb(24, 24, 24);
+  background-color: rgba(24, 24, 24, 0.5);
+  backdrop-filter: blur(4px);
   border-radius: 5px;
   border: 1px solid rgb(50, 50, 50);
+  z-index: 10;
 
   h3 {
     color: white;
@@ -50,31 +52,35 @@ const HexagonGridEnv: React.FC = () => {
             })
           }
         />
+        <h3>Tile width</h3>
+        <StyledInput
+          value={hexagonGridProps.tileWidth}
+          type={"range"}
+          min={1}
+          step={1}
+          max={10}
+          onChange={(e) =>
+            handleChange({
+              ...hexagonGridProps,
+              tileWidth: parseInt(e.target.value),
+            })
+          }
+        />
+        <h3>Tile spacing</h3>
+        <StyledInput
+          value={hexagonGridProps.tileSpacing}
+          type={"range"}
+          min={1}
+          step={1}
+          max={10}
+          onChange={(e) =>
+            handleChange({
+              ...hexagonGridProps,
+              tileSpacing: parseInt(e.target.value),
+            })
+          }
+        />
       </StyledInputContainer>
-      {/* <StyledInput
-        value={hexagonGridProps.tileSpacing}
-        type={"number"}
-        min={0}
-        max={10}
-        onChange={(e) =>
-          handleChange({
-            ...hexagonGridProps,
-            tileSpacing: parseInt(e.target.value),
-          })
-        }
-      />
-      <StyledInput
-        value={hexagonGridProps.tileWidth}
-        type={"number"}
-        min={1}
-        max={50}
-        onChange={(e) =>
-          handleChange({
-            ...hexagonGridProps,
-            tileWidth: parseInt(e.target.value),
-          })
-        }
-      /> */}
       <Canvas
         style={{ height: "100vh" }}
         camera={{ position: [0, 80, 0], zoom: 1 }}

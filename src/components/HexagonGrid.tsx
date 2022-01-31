@@ -24,7 +24,9 @@ const HexagonGrid: React.FC<HexgagonGridProps> = (props) => {
     position,
   }: IGenerateHexagonGridParams) => {
     let result: ReactNode[] = [];
+
     const tileSize = (tileWidth / Math.sqrt(3)) * 3;
+
     const startingTilePos: { x: number; z: number } = {
       x:
         (-gridRadius * (tileSize + tileSpacing)) / 2 +

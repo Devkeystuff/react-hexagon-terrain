@@ -70,7 +70,7 @@ const HexagonGridEnv: React.FC = () => {
         <StyledInput
           value={hexagonGridProps.tileSpacing}
           type={"range"}
-          min={1}
+          min={0}
           step={1}
           max={10}
           onChange={(e) =>

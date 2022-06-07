@@ -1,9 +1,8 @@
-import React, { ReactNode } from "react";
-import {} from "@react-three/drei";
 import "@react-three/fiber";
+import React, { ReactNode } from "react";
 
 export interface HexgagonGridProps {
-  position: [number, number, number];
+  position?: [number, number, number];
   gridRadius: number;
   tileSpacing: number;
   tileWidth: number;
@@ -73,7 +72,7 @@ const HexagonGrid: React.FC<HexgagonGridProps> = (props) => {
         gridRadius: props.gridRadius,
         tileSpacing: props.tileSpacing,
         tileWidth: props.tileWidth,
-        position: props.position,
+        position: props.position ?? [0, 0, 0],
       })}
     </>
   );
